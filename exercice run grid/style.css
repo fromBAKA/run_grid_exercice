@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-block: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 15px 30px 15px 30px;
+    background: #f1f1f1;
+    color: #333;
+    border-radius: 40px;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgb(0, 0, 0);
+    color: #f1f1f1;
+}
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------------------------ HEADER ---------------------------------------------------------------------*/
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+}
+
+.img-run {
+    background: url(./assets/img/banner.jpg) right/cover;
+}
+
+.left-part-run h1 {
+    padding: 15px 0;
+    font-size: 2.6rem;
+}
+
+.left-part-run p {
+    font-size: 1.2rem;
+    padding: 20px 0 40px;
+    line-height: 40px;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgb(218, 218, 218);
+}
+
+/*--------------------------------------------------------------- SECTION MAGNA -----------------------------------------------------------------*/
+
+.magna {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 500px;
+}
+
+.img-magna {
+    background: url(./assets/img/img-left.jpg) center/cover;
+}
+
+.right-part h2 {
+    padding: 15px 0;
+    font-size: 1.8rem;
+}
+
+.right-part p {
+    font-size: 1.2rem;
+    padding: 20px 0 40px;
+    line-height: 40px;
+}
+
+/*-------------------------------------------------------------- SECTION TEMPUS -----------------------------------------------------------------*/
+
+.tempus {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    min-height: 500px;
+}
+
+.left-part h2{
+    padding: 15px 0;
+    font-size: 1.8rem;
+}
+
+.left-part p {
+    font-size: 1.2rem;
+    padding: 20px 0 40px;
+    line-height: 40px;
+}
+
+.img-tempus {
+    background: url(./assets/img/img-right.jpg) center/cover;
+}
+
+/*-------------------------------------------------------------- SECTION CONTACT ----------------------------------------------------------------*/
+
+.contact {
+    text-align: center;
+    position: relative;
+    padding: 60px 0;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 224px;
+    grid-template-areas:
+    "input1 input2"
+    "texta texta";
+    gap: 10px;
+    width: 85%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+.textarea {
+    grid-area: texta;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    margin: 20px 0 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: 0.5s;
+}
+input[type="text"]:focus,
+textarea:focus {
+    border: 2px solid skyblue;
+}
+textarea {
+    resize: none;
+    height: 180px;
+}
+
+/*-------------------------------------------------------------- SECTION FOOTER ----------------------------------------------------------------*/
+
+
+footer {
+    position: relative;
+}
+footer::before {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background: rgb(218, 218, 218);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+ul a {
+    list-style-type: none;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 9999px;
+    padding: 10px 10px;
+    width: 8%;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+ul a:hover {
+    background: #111;
+    color: #f1f1f1;
+}
+
+/*-------------------------------------------------------------- MEDIA QUERIES ----------------------------------------------------------------*/
+
+@media screen and (max-width: 750px) {
+    header {
+        display: block;
+    }
+    .img-run {
+        height: 400px;
+    }
+    .magna {
+        display: block;
+    }
+    .img-magna {
+        display: none;
+    }
+    .tempus {
+        display: block;
+    }
+    .img-tempus {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    ul a {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    ul a {
+        width: 12%;
+    }
+    ul li {
+        font-size: 0.8rem;
+    }
+}
